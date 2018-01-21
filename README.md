@@ -41,3 +41,26 @@
 * Fight overfitting in small dataset: use visual data augmentation;
 * Achieve higher accuracy: use a pre-trained convnet to do feature extraction and fine-tuning;
 * Represent the learning process: generate visualizations of the outputs, filters and heatmaps of the convnet.
+
+4. Pseudo-code simple RNN:
+```python
+state_t=0
+for input_t in input_sequence:
+	output_t=activation(dot(W, input_t)+dot(U, state_t)+b)
+	state_t=output_t
+```
+A RNN is just a 'for' loop that reuses quantities computed during the previous iteration of the loop.<br>
+
+5. Pseudo-code LSTM:
+```python
+output_t=activation(dot(state_t, Uo)+dot(input_t, Wo)+dot(C_t, Vo)+bo)
+
+i_t=activation(dot(state_t, Ui)+dot(input_t, Wi)+bi)
+f_t=activation(dot(state_t, Uf)+dot(input_t, Wf)+bf)
+k_t=activation(dot(state_t, Uk)+dot(input_t, Wk)+bk)
+
+c_t+1=i_t*k_t + c_t*f_t 
+```
+The LSTM cell is meant to allow past information to be reinjected at a later time, thus fighting the vanishing gradient problem.<br>
+The strength of LSTM is in question answering and machine translation.<br>
+
