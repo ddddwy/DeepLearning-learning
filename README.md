@@ -64,3 +64,7 @@ c_t+1=i_t*k_t + c_t*f_t
 The LSTM cell is meant to allow past information to be reinjected at a later time, thus fighting the vanishing gradient problem.<br>
 The strength of LSTM is in question answering and machine translation.<br>
 
+6. 1D convnet for processing sequences:
+* Consist of stacks of Conv1D layers and MaxPooling1D layers, and eventually end in a global pooling operation or flattening operation.
+* Use a 1D convnet as a preprocessing step before a RNN, shortening the sequence and extracting useful representations for the RNN to process.
+
