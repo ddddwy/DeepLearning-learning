@@ -68,3 +68,13 @@ The strength of LSTM is in question answering and machine translation.<br>
 * Consist of stacks of Conv1D layers and MaxPooling1D layers, and eventually end in a global pooling operation or flattening operation.
 * Use a 1D convnet as a preprocessing step before a RNN, shortening the sequence and extracting useful representations for the RNN to process.
 
+7. Build high-performing deep convnets:
+* Residual connections
+* Batch normalization (BatchNormalization())
+* Depthwise separable convolutions (SeparableConv2D())
+
+8. Hyperparameter optimization:
+* Hyperopt library or Hyperas library.
+* Be careful about validation set overfitting!
+
+
